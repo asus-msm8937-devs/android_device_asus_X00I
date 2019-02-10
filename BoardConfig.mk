@@ -18,6 +18,9 @@ DEVICE_PATH := device/asus/X00I
 # Assert
 TARGET_OTA_ASSERT_DEVICE := X00I,X00ID,ASUS_X00ID_4
 
+# HIDL
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+
 # Kernel
 TARGET_KERNEL_CONFIG := msm8937-perf_defconfig
 

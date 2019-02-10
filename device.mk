@@ -53,5 +53,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     device/asus/X00I
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.asus_8937
+
 # Inherit vendor
 $(call inherit-product, vendor/asus/X00I/X00I-vendor.mk)
