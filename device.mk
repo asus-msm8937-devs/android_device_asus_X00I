@@ -27,6 +27,11 @@ TARGET_SCREEN_WIDTH := 720
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.device.rc
