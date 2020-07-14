@@ -16,6 +16,10 @@
 # Inherit from msm8937-common
 $(call inherit-product, device/asus/msm8937-common/msm8937.mk)
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    init.device.rc
+
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     device/asus/X00I
