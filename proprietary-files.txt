@@ -817,3 +817,7 @@ vendor/firmware/leia_pm4_470.fw
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8937.so
 vendor/lib64/hw/gatekeeper.msm8937.so
+
+# Keystore
+vendor/lib/hw/keystore.msm8937.so
+vendor/lib64/hw/keystore.msm8937.so
