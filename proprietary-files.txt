@@ -813,3 +813,7 @@ vendor/firmware/a530_pm4.fw
 vendor/firmware/a540_gpmu.fw2
 vendor/firmware/leia_pfp_470.fw
 vendor/firmware/leia_pm4_470.fw
+
+# Gatekeeper
+vendor/lib/hw/gatekeeper.msm8937.so
+vendor/lib64/hw/gatekeeper.msm8937.so
