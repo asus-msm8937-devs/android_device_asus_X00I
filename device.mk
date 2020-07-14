@@ -16,6 +16,17 @@
 # Inherit from msm8937-common
 $(call inherit-product, device/asus/msm8937-common/msm8937.mk)
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+
+# Properties
+-include $(LOCAL_PATH)/vendor_prop.mk
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.device.rc
