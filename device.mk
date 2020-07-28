@@ -35,6 +35,10 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    libunwind
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
