@@ -22,7 +22,7 @@ TARGET_OTA_ASSERT_DEVICE := X00I,X00ID,ASUS_X00ID_4
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
-TARGET_KERNEL_CONFIG := msm8937-perf_defconfig
+TARGET_KERNEL_CONFIG := X00I_defconfig
 
 # Inherit from common msm8937-common
 -include device/asus/msm8937-common/BoardConfigCommon.mk
