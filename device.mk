@@ -39,6 +39,10 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 PRODUCT_PACKAGES += \
     libunwind
 
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-impl \
+    android.hardware.biometrics.fingerprint@2.1-service
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
