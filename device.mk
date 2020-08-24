@@ -42,7 +42,8 @@ PRODUCT_PACKAGES += \
 
 # Input
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/gf5216.kl:system/usr/keylayout/gf5216.kl
+    $(LOCAL_PATH)/keylayout/gf5216.kl:system/usr/keylayout/gf5216.kl \
+    $(LOCAL_PATH)/keylayout/qwerty.kl:system/usr/keylayout/querty.kl
 
 # Keymaster
 PRODUCT_PACKAGES += \
