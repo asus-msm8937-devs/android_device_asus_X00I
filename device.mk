@@ -40,8 +40,7 @@ PRODUCT_PACKAGES += \
     libunwind
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-impl \
-    android.hardware.biometrics.fingerprint@2.1-service
+    android.hardware.biometrics.fingerprint@2.1-service.X00I
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
