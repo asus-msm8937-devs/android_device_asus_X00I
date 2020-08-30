@@ -1,6 +1,8 @@
 on init
     chmod 0666 /dev/goodix_fp
     chown system system /dev/goodix_fp
+    chmod 0755 /vendor/bin/gx_fpd
+    chown system system /vendor/bin/gx_fpd
 
     chmod 0666 /dev/focal_fp
     chown system system /dev/focal_fp
