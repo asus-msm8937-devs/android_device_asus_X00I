@@ -25,7 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on property:sys.fp.focal=0
+on property:persist.vendor.sys.fp.vendor=goodix
     start gx_fpd
 
 service gx_fpd /vendor/bin/gx_fpd
