@@ -35,6 +35,10 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
+# Camera
+PRODUCT_PACKAGES += \
+    libgui_vendor
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     libunwind
