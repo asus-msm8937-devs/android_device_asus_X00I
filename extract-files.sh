@@ -42,4 +42,6 @@ for blob in libarcsoft_hdr.so libarcsoft_nighthawk.so libarcsoft_night_shot.so l
     patchelf --remove-needed "libandroid.so" "$DEVICE_BLOB_ROOT/vendor/lib/$blob"
 done
 
-patchelf --replace-needed "libgui.so" "libgui_vendor.so" "$DEVICE_BLOB_ROOT/vendor/lib/hw/camera.msm8937.so"
+for blob in hw/camera.msm8937.so libcamera_client.so; do
+    patchelf --replace-needed "libgui.so" "libgui_vendor.so" "$DEVICE_BLOB_ROOT/vendor/lib/$blob"
+done
