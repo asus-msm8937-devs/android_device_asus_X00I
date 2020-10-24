@@ -63,6 +63,7 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
+    fstab.qcom \
     init.device.rc
 
 # Soong
