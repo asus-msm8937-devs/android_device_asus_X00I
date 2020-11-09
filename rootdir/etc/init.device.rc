@@ -25,6 +25,13 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+on init
+    chmod 0666 /dev/goodix_fp
+    chown system system /dev/goodix_fp
+
+    chmod 0666 /dev/focal_fp
+    chown system system /dev/focal_fp
+
 on property:persist.vendor.sys.fp.vendor=goodix
     start gx_fpd
 
