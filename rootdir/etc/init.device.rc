@@ -32,7 +32,7 @@ on init
     chmod 0666 /dev/focal_fp
     chown system system /dev/focal_fp
 
-on property:persist.vendor.sys.fp.vendor=goodix
+on property:sys.fp.focal=0
     start gx_fpd
 
 service gx_fpd /vendor/bin/gx_fpd
