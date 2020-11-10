@@ -3,4 +3,4 @@ com.fingerprints.extension::IFingerprintEngineering                     u:object
 com.fingerprints.extension::IFingerprintNavigation                      u:object_r:hal_fingerprint_hwservice:s0
 com.fingerprints.extension::IFingerprintSenseTouch                      u:object_r:hal_fingerprint_hwservice:s0
 com.fingerprints.extension::IFingerprintSensorTest                      u:object_r:hal_fingerprint_hwservice:s0
-vendor.goodix.hardware.fingerprint::IGoodixBiometricsFingerprint        u:object_r:hal_fingerprint_hwservice:s0
+vendor.goodix.hardware.fingerprint.hwbinder::IGoodixBiometricsFingerprint u:object_r:hal_fingerprint_hwservice:s0
