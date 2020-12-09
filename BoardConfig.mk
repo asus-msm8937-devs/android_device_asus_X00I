@@ -34,5 +34,8 @@ TARGET_KERNEL_CONFIG := X00I_defconfig
 # Recovery 
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom 
 
+# SELinux
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+
 # Inherit from the proprietary version
 -include vendor/asus/X00I/BoardConfigVendor.mk

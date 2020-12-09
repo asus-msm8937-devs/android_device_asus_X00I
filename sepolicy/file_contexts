@@ -1,0 +1,2 @@
+# gx_fpd
+/(vendor|system/vendor)/bin/gx_fpd              u:object_r:gx_fpd_exec:s0
