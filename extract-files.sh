@@ -45,3 +45,10 @@ done
 for blob in hw/camera.msm8937.so libcamera_client.so; do
     patchelf --replace-needed "libgui.so" "libgui_vendor.so" "$DEVICE_BLOB_ROOT/vendor/lib/$blob"
 done
+
+patchelf --replace-needed "libbacktrace.so" "libbacktrace_vendor.so" "$DEVICE_BLOB_ROOT/vendor/bin/gx_fpd"
+patchelf --replace-needed "libkeystore_binder.so" "libkeystore_binder_vendor.so" "$DEVICE_BLOB_ROOT/vendor/lib64/hw/fingerprint.default.so"
+
+for blob in bin/gx_fpd lib64/hw/fingerprint.default.so; do
+    patchelf --replace-needed "libunwind.so" "libunwind_vendor.so" "$DEVICE_BLOB_ROOT/vendor/$blob"
+done
