@@ -40,9 +40,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libunwind_vendor
 
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1
-
 EXTRA_VENDOR_LIBRARIES += \
     libbacktrace_vendor \
     libkeystore_binder_vendor
