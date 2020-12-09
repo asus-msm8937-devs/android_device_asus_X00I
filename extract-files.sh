@@ -38,17 +38,22 @@ if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 LINEAGE_ROOT="$MY_DIR"/../../..
 DEVICE_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
+if [ -z "$PATCHELF" ]; then
+    HOST="$(uname | tr '[:upper:]' '[:lower:]')"
+    PATCHELF="$LINEAGE_ROOT"/prebuilts/tools-lineage/${HOST}-x86/bin/patchelf
+fi
+
 for blob in libarcsoft_hdr.so libarcsoft_nighthawk.so libarcsoft_night_shot.so libarcsoft_panorama_burstcapture.so libarcsoft_videostab.so libmpbase.so; do
-    patchelf --remove-needed "libandroid.so" "$DEVICE_BLOB_ROOT/vendor/lib/$blob"
+    "${PATCHELF}" --remove-needed "libandroid.so" "$DEVICE_BLOB_ROOT/vendor/lib/$blob"
 done
 
 for blob in hw/camera.msm8937.so libcamera_client.so; do
-    patchelf --replace-needed "libgui.so" "libgui_vendor.so" "$DEVICE_BLOB_ROOT/vendor/lib/$blob"
+    "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "$DEVICE_BLOB_ROOT/vendor/lib/$blob"
 done
 
-patchelf --replace-needed "libbacktrace.so" "libbacktrace_vendor.so" "$DEVICE_BLOB_ROOT/vendor/bin/gx_fpd"
-patchelf --replace-needed "libkeystore_binder.so" "libkeystore_binder_vendor.so" "$DEVICE_BLOB_ROOT/vendor/lib64/hw/fingerprint.default.so"
+"${PATCHELF}" --replace-needed "libbacktrace.so" "libbacktrace_vendor.so" "$DEVICE_BLOB_ROOT/vendor/bin/gx_fpd"
+"${PATCHELF}" --replace-needed "libkeystore_binder.so" "libkeystore_binder_vendor.so" "$DEVICE_BLOB_ROOT/vendor/lib64/hw/fingerprint.default.so"
 
 for blob in bin/gx_fpd lib64/hw/fingerprint.default.so; do
-    patchelf --replace-needed "libunwind.so" "libunwind_vendor.so" "$DEVICE_BLOB_ROOT/vendor/$blob"
+    "${PATCHELF}" --replace-needed "libunwind.so" "libunwind_vendor.so" "$DEVICE_BLOB_ROOT/vendor/$blob"
 done
