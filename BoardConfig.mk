@@ -13,6 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit from common msm8937-common
+-include device/asus/msm8937-common/BoardConfigCommon.mk
+
 DEVICE_PATH := device/asus/X00I
 
 # Assert
@@ -33,9 +36,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
-
-# Inherit from common msm8937-common
--include device/asus/msm8937-common/BoardConfigCommon.mk
 
 # Inherit from the proprietary version
 -include vendor/asus/X00I/BoardConfigVendor.mk
