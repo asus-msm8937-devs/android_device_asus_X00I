@@ -784,6 +784,8 @@ vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/hw/fingerprint.default.so
 vendor/lib64/hw/fingerprintfocal.default.so
 vendor/lib64/hw/gxfingerprint.default.so
+vendor/lib64/libfp_client.so
+vendor/lib64/libfpservice.so
 vendor/lib64/libvendor.goodix.hardware.fingerprint.hwbinder@2.1.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
