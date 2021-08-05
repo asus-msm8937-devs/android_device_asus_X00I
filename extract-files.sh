@@ -16,6 +16,14 @@ function blob_fixup() {
         |vendor/lib/libmpbase.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             ;;
+        vendor/bin/gx_fpd \
+        |vendor/lib64/hw/fingerprint.default.so \
+        |vendor/lib64/libfp_client.so \
+        |vendor/lib64/libfpservice.so)
+            "${PATCHELF_0_8}" --remove-needed "libbacktrace.so" "${2}"
+            "${PATCHELF_0_8}" --remove-needed "libunwind.so" "${2}"
+            sed -i "s|libbinder.so|gxfp_shim.so|g" "${2}"
+            ;;
     esac
 }
 
