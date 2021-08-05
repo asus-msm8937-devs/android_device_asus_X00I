@@ -24,5 +24,8 @@ TARGET_SCREEN_DENSITY := 320
 # Kernel
 TARGET_KERNEL_CONFIG := X00I_defconfig
 
+# VNDK
+BOARD_VNDK_RUNTIME_DISABLE := true
+
 # Inherit from the proprietary version
 include vendor/asus/X00I/BoardConfigVendor.mk
