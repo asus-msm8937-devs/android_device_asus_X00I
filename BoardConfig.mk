@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Partitions
+TARGET_USES_CACHE_AS_VENDOR := true
+
 # Inherit from msm8937-common
 include device/asus/msm8937-common/BoardConfigCommon.mk
 
