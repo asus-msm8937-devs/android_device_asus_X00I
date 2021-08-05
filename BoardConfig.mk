@@ -12,6 +12,9 @@ include device/asus/msm8937-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/asus/X00I
 
+# Assert
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+
 # Build
 BUILD_BROKEN_DUP_RULES := true
 
