@@ -1,0 +1,8 @@
+service vendor.gx_fpd /vendor/bin/gx_fpd
+   class late_start
+   user system
+   group system
+   disabled
+
+on property:sys.fp.focal=0
+   start vendor.gx_fpd
